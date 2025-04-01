@@ -95,3 +95,17 @@ vendor/bin/phpunit tests/Services/WordFrequencyServiceTest.php
 vendor/bin/phpunit tests/Controllers/WordFrequencyControllerTest.php
 ```
 
+## Running the dev server
+
+Run the server by the following command:
+
+```
+php -S localhost:8000 task2.php
+
+```
+
+To interact with the API:
+- POST to / with JSON body {"text": "your text here"} to process text
+- GET / to get all word frequencies
+- GET /?word=example to get frequency for a specific word
+
