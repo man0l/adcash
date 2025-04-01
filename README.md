@@ -84,3 +84,14 @@ This is the file storage
 src/Services/Cache/DummyCache.php
 ```
 A dummy cache to show the possibility of Cache-Aside strategy. A potential solution would be in-memory cache as Redis.
+```
+
+## Running Tests
+
+To run the tests (WordFrequencyService and WordFrequencyController), use the following commands:
+
+```
+vendor/bin/phpunit tests/Services/WordFrequencyServiceTest.php
+vendor/bin/phpunit tests/Controllers/WordFrequencyControllerTest.php
+```
+
