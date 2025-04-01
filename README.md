@@ -44,3 +44,34 @@ Here are a few examples with different scenarios:
 ```
 ./vendor/bin/phpunit tests/BidProcessorTest.php
 ```
+
+
+# Task 2 - Word Frequency Counter
+
+## Assumptions
+- A file system storage is used for saving the state of the user feeding with a data.
+- The maximum POST request size is not set, e.g. it depends on the ini value - post_max_size
+- The system uses the built in php development server
+
+## The Architecture
+
+The architecture is simple:
+
+```
+task2.php
+```
+ This is a document root. (as it woudl be if I've be runnning a nginx or apache server, index.php)
+
+```
+src/Controllers/WordFrequencyController.php
+``` 
+This is the controller for handling POST and GET requests
+```
+src/Services/WordFrequencyService.php
+``` 
+Is the main service for feeding the system with a text and getting the word frequencies
+
+```
+word_frequencies.json
+```
+This is the file storage
