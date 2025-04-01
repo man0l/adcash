@@ -1,8 +1,12 @@
 # Prerequisites
 
-Make sure you run composer install to setup the project and install phpunit
+## Make sure you run composer install to setup the project and install phpunit
 
 `composer install`
+
+## PHP version
+
+Tetsted on 8.3.6 and should run seamlessly on php 8.4
 
 # Task 1 - Advertising bid auction
 
