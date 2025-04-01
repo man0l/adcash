@@ -52,6 +52,7 @@ Here are a few examples with different scenarios:
 - A file system storage is used for saving the state of the user feeding with a data.
 - The maximum POST request size is not set, e.g. it depends on the ini value - post_max_size
 - The system uses the built in php development server
+- The system is not intended to handle large input data (along with the post_max_size limit), because it uses json file for persistring the word count. To handle larger data I will recommend using nosql solution for storing and accessing fast. NoSQL solutions like MongoDB or Redis supports availability and scalability (depends if we needed it) through sharding for example.
 
 ## The Architecture
 
@@ -60,7 +61,7 @@ The architecture is simple:
 ```
 task2.php
 ```
- This is a document root. (as it woudl be if I've be runnning a nginx or apache server, index.php)
+ This is a document root - the entrypoint which the built in server will use
 
 ```
 src/Controllers/WordFrequencyController.php
@@ -75,3 +76,10 @@ Is the main service for feeding the system with a text and getting the word freq
 word_frequencies.json
 ```
 This is the file storage
+
+```
+
+```
+src/Services/Cache/DummyCache.php
+```
+A dummy cache to show the possibility of Cache-Aside strategy. A potential solution would be in-memory cache as Redis.
