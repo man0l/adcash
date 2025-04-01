@@ -53,6 +53,7 @@ Here are a few examples with different scenarios:
 - The maximum POST request size is not set, e.g. it depends on the ini value - post_max_size
 - The system uses the built in php development server
 - The system is not intended to handle large input data (along with the post_max_size limit), because it uses json file for persistring the word count. To handle larger data I will recommend using nosql solution for storing and accessing fast. NoSQL solutions like MongoDB or Redis supports availability and scalability (depends if we needed it) through sharding for example.
+- The tests are not covering the caching functionality
 
 ## The Architecture
 
