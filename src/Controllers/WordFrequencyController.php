@@ -27,6 +27,11 @@ class WordFrequencyController
     public function getWordFrequency(string $word): array
     {
         $frequency = $this->service->getWordFrequency($word);
+
+        if ($frequency === 0) {
+            throw new InvalidArgumentException('Word not found');
+        }
+        
         return ['word' => $word, 'frequency' => $frequency];
     }
 

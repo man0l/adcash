@@ -99,7 +99,9 @@ class WordFrequencyService
         
         $frequency = $this->wordFrequencies[$word] ?? 0;
         
-        $this->cache->set($cacheKey, $frequency, 3600); // Cache for 1 hour
+        if ($frequency > 0) {
+            $this->cache->set($cacheKey, $frequency, 3600); // Cache for 1 hour
+        }
         
         return $frequency;
     }
