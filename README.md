@@ -79,12 +79,12 @@ word_frequencies.json
 This is the file storage
 
 ```
+src/Services/Cache/DummyCache.php
 
 ```
-src/Services/Cache/DummyCache.php
-```
+
 A dummy cache to show the possibility of Cache-Aside strategy. A potential solution would be in-memory cache as Redis.
-```
+
 
 ## Running Tests
 
