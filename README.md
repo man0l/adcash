@@ -109,3 +109,17 @@ To interact with the API:
 - GET / to get all word frequencies
 - GET /?word=example to get frequency for a specific word
 
+# Task 3
+
+## Run the task
+
+```
+php task3.php
+```
+
+## Run tests
+
+```
+vendor/bin/phpunit tests/MazeSolverTest.php
+
+```
